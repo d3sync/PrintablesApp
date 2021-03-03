@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl>ftp://tools.idle.gr/PrintableApp/</PublishUrl>
+    <PublishUrl>ftp://tools.idle.gr/public_html/PrintablesApp/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -23,10 +23,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://localhost/PrintablesApp/</InstallUrl>
+    <InstallUrl>http://tools.idle.gr/PrintablesApp/</InstallUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -62,6 +62,15 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>PrintablesApp_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NetBarcode, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -102,6 +111,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="PrintablesApp_TemporaryKey.pfx" />
@@ -118,6 +128,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\image.webp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -133,6 +144,44 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\external-content.duckduckgo.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\121544180_1751764951656341_6154754336569712452_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\external-content.duckduckgo.com.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HANDLE-WITH-CARE-International-Safe-Handling-Label-1000px.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MASKS-carousel-zoom_Page_5-1024x1024-1-e1596708923957.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stay-safe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stopcovid19_1350x1350-13-55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viber_image_2020-07-28_22-00-30.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2 καταστημα.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pinakida-simansis-face-mask-required.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <None Include="Resources\1 atomo.png" />
+    <None Include="Resources\mandatory masks 2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

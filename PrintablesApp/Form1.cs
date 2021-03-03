@@ -81,7 +81,7 @@ namespace PrintablesApp
                 printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("A4", 297, 210);
                 printDocument1.DocumentName = "apostoles_dematwn";
                 printDocument1.Print();
-
+                printDocument1.Dispose();
             }
         }
 
@@ -209,7 +209,7 @@ namespace PrintablesApp
                         new System.Drawing.Printing.PaperSize("A4", 297, 210);
                     printDocument2.DocumentName = $"apostoles_dematwn_page_{txtPrintOne.Text}_of_{txtAD.Text}";
                     printDocument2.Print();
-
+                    printDocument2.Dispose();
                 }
             }
 
@@ -217,6 +217,283 @@ namespace PrintablesApp
             {
                 MessageBox.Show("Δεν έχετε καταχωρήση Αριθμό Δεμάτων ή/και Αριθμό Αποστολής! ");
             }
+        }
+
+        private void printDocument3_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Image cov = Properties.Resources.stay_safe;
+            e.Graphics.DrawImage(cov, 60, 10,1000,800);
+        }
+
+        private void btnStaySafe_Click(object sender, EventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+
+            printDialog.Document = printDocument3; //add the document to the dialog box...        
+
+            //printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(CreateReceipt); //add an event handler that will do the printing
+
+            //on a till you will not want to ask the user where to print but this is fine for the test envoironment.
+
+            DialogResult result = printDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+
+                printDocument3.DefaultPageSettings.Landscape = true;
+                printDocument3.DefaultPageSettings.PaperSize =
+                    new System.Drawing.Printing.PaperSize("A4", 297, 210);
+                //printDocument2.DocumentName = $"apostoles_dematwn_page_{txtPrintOne.Text}_of_{txtAD.Text}";
+                printDocument3.Print();
+                printDocument3.Dispose();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+
+            printDialog.Document = printDocument4; //add the document to the dialog box...        
+
+            //printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(CreateReceipt); //add an event handler that will do the printing
+
+            //on a till you will not want to ask the user where to print but this is fine for the test envoironment.
+
+            DialogResult result = printDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+
+                printDocument4.DefaultPageSettings.Landscape = true;
+                printDocument4.DefaultPageSettings.PaperSize =
+                    new System.Drawing.Printing.PaperSize("A4", 297, 210);
+                //printDocument2.DocumentName = $"apostoles_dematwn_page_{txtPrintOne.Text}_of_{txtAD.Text}";
+                printDocument4.Print();
+                printDocument4.Dispose();
+            }
+        }
+
+        private void printDocument4_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Image cov = Properties.Resources.stop_covid19;
+            e.Graphics.DrawImage(cov, 60, 10,1000,800);
+        }
+
+        private void printDocument5_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Image cov = Properties.Resources.how_not_to_wear_a_mask;
+            e.Graphics.DrawImage(cov, 60, 10,1000,800);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+
+            printDialog.Document = printDocument5; //add the document to the dialog box...        
+
+            //printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(CreateReceipt); //add an event handler that will do the printing
+
+            //on a till you will not want to ask the user where to print but this is fine for the test envoironment.
+
+            DialogResult result = printDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+
+                printDocument5.DefaultPageSettings.Landscape = true;
+                printDocument5.DefaultPageSettings.PaperSize =
+                    new System.Drawing.Printing.PaperSize("A4", 297, 210);
+                //printDocument2.DocumentName = $"apostoles_dematwn_page_{txtPrintOne.Text}_of_{txtAD.Text}";
+                printDocument5.Print();
+                printDocument5.Dispose();
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+
+            printDialog.Document = printDocument6; //add the document to the dialog box...        
+
+            //printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(CreateReceipt); //add an event handler that will do the printing
+
+            //on a till you will not want to ask the user where to print but this is fine for the test envoironment.
+
+            DialogResult result = printDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+
+                printDocument6.DefaultPageSettings.Landscape = true;
+                printDocument6.DefaultPageSettings.PaperSize =
+                    new System.Drawing.Printing.PaperSize("A4", 297, 210);
+                //printDocume6t2.DocumentName = $"apostoles_dematwn_page_{txtPrintOne.Text}_of_{txtAD.Text}";
+                printDocument6.Print();
+                printDocument6.Dispose();
+
+            }
+        }
+
+        private void printDocument6_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Image cov = Properties.Resources.until_2;
+            e.Graphics.DrawImage(cov, 60, 10,1000,800);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+
+            printDialog.Document = printDocument7; //add the document to the dialog box...        
+
+            //printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(CreateReceipt); //add an event handler that will do the printing
+
+            //on a till you will not want to ask the user where to print but this is fine for the test envoironment.
+
+            DialogResult result = printDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+
+                printDocument7.DefaultPageSettings.Landscape = false;
+                printDocument7.DefaultPageSettings.PaperSize =
+                    new System.Drawing.Printing.PaperSize("A4", 210, 297);
+                //printDocume6t2.DocumentName = $"apostoles_dematwn_page_{txtPrintOne.Text}_of_{txtAD.Text}";
+                printDocument7.Print();
+                printDocument7.Dispose();
+
+            }
+        }
+
+        private void printDocument7_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Image cov = Properties.Resources.pinakida_simansis_face_mask_required;
+            e.Graphics.DrawImage(cov, 60, 10,730,1000);
+        }
+
+        private void handle_wcDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Image cov = Properties.Resources.handle_with_care;
+            e.Graphics.DrawImage(cov, 60, 10,730,1000);
+        }
+
+        private void handle_wcupDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Image cov = Properties.Resources.handle_with_care_tsup;
+            e.Graphics.DrawImage(cov, 60, 10,730,1000);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+
+            printDialog.Document = handle_wcDocument; //add the document to the dialog box...        
+
+            //printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(CreateReceipt); //add an event handler that will do the printing
+
+            //on a till you will not want to ask the user where to print but this is fine for the test envoironment.
+
+            DialogResult result = printDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+
+                handle_wcDocument.DefaultPageSettings.Landscape = false;
+                handle_wcDocument.DefaultPageSettings.PaperSize =
+                    new System.Drawing.Printing.PaperSize("A4", 210, 297);
+                //printDocume6t2.DocumentName = $"apostoles_dematwn_page_{txtPrintOne.Text}_of_{txtAD.Text}";
+                handle_wcDocument.Print();
+                handle_wcDocument.Dispose();
+
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+
+            printDialog.Document = handle_wcupDocument; //add the document to the dialog box...        
+
+            //printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(CreateReceipt); //add an event handler that will do the printing
+
+            //on a till you will not want to ask the user where to print but this is fine for the test envoironment.
+
+            DialogResult result = printDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+
+                handle_wcupDocument.DefaultPageSettings.Landscape = false;
+                handle_wcupDocument.DefaultPageSettings.PaperSize =
+                    new System.Drawing.Printing.PaperSize("A4", 210, 297);
+                //printDocume6t2.DocumentName = $"apostoles_dematwn_page_{txtPrintOne.Text}_of_{txtAD.Text}";
+                handle_wcupDocument.Print();
+                handle_wcupDocument.Dispose();
+
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+
+            printDialog.Document = printDocument8; //add the document to the dialog box...        
+
+            //printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(CreateReceipt); //add an event handler that will do the printing
+
+            //on a till you will not want to ask the user where to print but this is fine for the test envoironment.
+
+            DialogResult result = printDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+
+                printDocument8.DefaultPageSettings.Landscape = true;
+                printDocument8.DefaultPageSettings.PaperSize =
+                    new System.Drawing.Printing.PaperSize("A4", 297, 210);
+                //printDocume6t2.DocumentName = $"apostoles_dematwn_page_{txtPrintOne.Text}_of_{txtAD.Text}";
+                printDocument8.Print();
+                printDocument8.Dispose();
+
+            }
+        }
+
+        private void printDocument8_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Image cov = Properties.Resources.mandatory_masks_2;
+            e.Graphics.DrawImage(cov, 60, 10,1000,800);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+
+            printDialog.Document = printDocument9; //add the document to the dialog box...        
+
+            //printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(CreateReceipt); //add an event handler that will do the printing
+
+            //on a till you will not want to ask the user where to print but this is fine for the test envoironment.
+
+            DialogResult result = printDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+
+                printDocument9.DefaultPageSettings.Landscape = true;
+                printDocument9.DefaultPageSettings.PaperSize =
+                    new System.Drawing.Printing.PaperSize("A4", 297, 210);
+                //printDocume6t2.DocumentName = $"apostoles_dematwn_page_{txtPrintOne.Text}_of_{txtAD.Text}";
+                printDocument9.Print();
+                printDocument9.Dispose();
+
+            }
+        }
+
+        private void printDocument9_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Image cov = Properties.Resources._1_atomo;
+            e.Graphics.DrawImage(cov, 60, 10,1000,800);
         }
     }
 }
